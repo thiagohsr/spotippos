@@ -1,0 +1,335 @@
+{
+  "properties": [
+    {
+      "id": 1,
+      "title": "Imóvel código 1, com 5 quartos e 4 banheiros",
+      "price": 1250000,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "x": 870,
+      "y": 867,
+      "beds": 5,
+      "baths": 4,
+      "provinces": [
+        "Scavy"
+      ],
+      "squareMeters": 134
+    },
+    {
+      "title": "Imóvel código 2, com 3 quartos e 1 banheiros",
+      "price": 450000,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "x": 470,
+      "y": 367,
+      "beds": 3,
+      "baths": 1,
+      "provinces": [
+        "Gode"
+      ],
+      "squareMeters": 67,
+      "id": 2
+    },
+    {
+      "provinces": [
+        "Ruja",
+        "Gode"
+      ],
+      "description": "Coordenadas numericas sem headers.",
+      "title": "Apezao da horona, com 3 quartos e 1 banheiro",
+      "price": 450000,
+      "beds": 3,
+      "squareMeters": 110,
+      "baths": 1,
+      "y": 505,
+      "x": 570,
+      "id": 3
+    },
+    {
+      "squareMeters": 167,
+      "baths": 4,
+      "price": 1673000,
+      "beds": 5,
+      "y": 1000,
+      "title": "Imóvel código 6, com 5 quartos e 4 banheiros.",
+      "provinces": [
+        "Gode"
+      ],
+      "description": "Sit ea commodo magna culpa qui officia proident. Nostrud esse consectetur adipisicing duis sunt commodo reprehenderit quis nulla irure.",
+      "x": 122,
+      "id": 4
+    },
+    {
+      "squareMeters": 167,
+      "baths": 4,
+      "price": 1673000,
+      "beds": 5,
+      "y": 345,
+      "title": "Imóvel código 41, com 5 quartos e 4 banheiros.",
+      "provinces": [
+        "Scavy"
+      ],
+      "description": "Sit ea commodo magna culpa qui officia proident. Nostrud esse consectetur adipisicing duis sunt commodo reprehenderit quis nulla irure.",
+      "x": 22,
+      "id": 5
+    },
+    {
+      "squareMeters": 167,
+      "y": 1000,
+      "title": "Imóvel código 6, com 5 quartos e 4 banheiros.",
+      "beds": 5,
+      "provinces": [
+        "Gode"
+      ],
+      "price": 1673000,
+      "x": 122,
+      "description": "Sit ea commodo magna culpa qui officia proident. Nostrud esse consectetur adipisicing duis sunt commodo reprehenderit quis nulla irure.",
+      "baths": 4,
+      "id": 6
+    },
+    {
+      "beds": 5,
+      "x": 200,
+      "provinces": [
+        "Scavy"
+      ],
+      "description": "Sit ea commodo magna culpa qui officia proident. Nostrud esse consectetur adipisicing duis sunt commodo reprehenderit quis nulla irure.",
+      "baths": 4,
+      "title": "Imóvel código 6, com 5 quartos e 4 banheiros.",
+      "y": 200,
+      "squareMeters": 167,
+      "price": 1673000,
+      "id": 7
+    },
+    {
+      "baths": 4,
+      "squareMeters": 167,
+      "price": 1673000,
+      "title": "Imóvel código 6, com 5 quartos e 4 banheiros.",
+      "y": 15,
+      "provinces": [
+        "Scavy"
+      ],
+      "description": "Sit ea commodo magna culpa qui officia proident. Nostrud esse consectetur adipisicing duis sunt commodo reprehenderit quis nulla irure.",
+      "x": 200,
+      "beds": 5,
+      "id": 8
+    },
+    {
+      "x": 101,
+      "provinces": [
+        "Scavy"
+      ],
+      "title": "Imóvel código 4125, com 4 quartos e 3 banheiros.",
+      "baths": 3,
+      "price": 971000,
+      "squareMeters": 93,
+      "beds": 4,
+      "description": "Occaecat excepteur officia excepteur sit. Qui magna amet fugiat laborum enim.",
+      "y": 141,
+      "id": 9
+    },
+    {
+      "beds": 4,
+      "price": 971000,
+      "baths": 3,
+      "title": "Imóvel código 4125, com 4 quartos e 3 banheiros.",
+      "provinces": [
+        "Scavy"
+      ],
+      "description": "Occaecat excepteur officia excepteur sit. Qui magna amet fugiat laborum enim.",
+      "y": 141,
+      "squareMeters": 93,
+      "x": 101,
+      "id": 10
+    },
+    {
+      "y": 141,
+      "price": 971000,
+      "baths": 3,
+      "provinces": [
+        "Scavy"
+      ],
+      "description": "Occaecat excepteur officia excepteur sit. Qui magna amet fugiat laborum enim.",
+      "title": "Imóvel código 4125, com 4 quartos e 3 banheiros.",
+      "beds": 4,
+      "squareMeters": 93,
+      "x": 101,
+      "id": 11
+    },
+    {
+      "squareMeters": 93,
+      "description": "Occaecat excepteur officia excepteur sit. Qui magna amet fugiat laborum enim.",
+      "title": "Imóvel multi provincia, com 4 quartos e 3 banheiros.",
+      "baths": 3,
+      "y": 700,
+      "beds": 4,
+      "x": 600,
+      "price": 971000,
+      "provinces": [
+        "Gode",
+        "Ruja"
+      ],
+      "id": 12
+    },
+    {
+      "squareMeters": 93,
+      "description": "Occaecat excepteur officia excepteur sit. Qui magna amet fugiat laborum enim.",
+      "title": "Imóvel provincia Nova, com 4 quartos e 3 banheiros.",
+      "baths": 3,
+      "y": 300,
+      "beds": 4,
+      "x": 1200,
+      "price": 971000,
+      "provinces": [
+        "Nova"
+      ],
+      "id": 13
+    },
+    {
+      "y": 550,
+      "baths": 3,
+      "title": "Imóvel provincia Ruja, com 4 quartos e 3 banheiros.",
+      "description": "Occaecat excepteur officia excepteur sit. Qui magna amet fugiat laborum enim.",
+      "squareMeters": 93,
+      "provinces": [
+        "Ruja"
+      ],
+      "x": 610,
+      "beds": 4,
+      "price": 971000,
+      "id": 14
+    },
+    {
+      "provinces": [
+        "Ruja"
+      ],
+      "description": "Occaecat excepteur officia excepteur sit. Qui magna amet fugiat laborum enim.",
+      "x": 610,
+      "price": 971000,
+      "baths": 3,
+      "squareMeters": 93,
+      "beds": 4,
+      "title": "Imóvel provincia Ruja, com 4 quartos e 3 banheiros.",
+      "y": 550,
+      "id": 15
+    },
+    {
+      "provinces": [
+        "Scavy"
+      ],
+      "description": "Occaecat excepteur officia excepteur sit. Qui magna amet fugiat laborum enim.",
+      "x": 100,
+      "price": 971000,
+      "baths": 3,
+      "squareMeters": 93,
+      "beds": 4,
+      "title": "Imóvel provincia Scavy, com 4 quartos e 3 banheiros.",
+      "y": 30,
+      "id": 16
+    },
+    {
+      "provinces": [
+        "Groola"
+      ],
+      "description": "Qui magna amet fugiat laborum enim.",
+      "x": 601,
+      "price": 371000,
+      "baths": 2,
+      "squareMeters": 93,
+      "beds": 3,
+      "title": "Imóvel provincia Groole, com 2 quartos e 1 banheiros.",
+      "y": 400,
+      "id": 18
+    },
+    {
+      "baths": 3,
+      "title": "Imóvel multi provincia, com 4 quartos e 3 banheiros.",
+      "x": 600,
+      "description": "Occaecat excepteur officia excepteur sit. Qui magna amet fugiat laborum enim.",
+      "provinces": [
+        "Gode",
+        "Ruja"
+      ],
+      "beds": 4,
+      "squareMeters": 93,
+      "price": 971000,
+      "y": 700,
+      "id": 19
+    }
+  ],
+  "provinces": [
+    {
+      "Gode": {
+        "boundaries": {
+          "upperLeft": {
+            "x": 0,
+            "y": 1000
+          },
+          "bottomRight": {
+            "x": 600,
+            "y": 500
+          }
+        }
+      },
+      "Ruja": {
+        "boundaries": {
+          "upperLeft": {
+            "x": 400,
+            "y": 1000
+          },
+          "bottomRight": {
+            "x": 1100,
+            "y": 500
+          }
+        }
+      },
+      "Jaby": {
+        "boundaries": {
+          "upperLeft": {
+            "x": 1100,
+            "y": 1000
+          },
+          "bottomRight": {
+            "x": 1400,
+            "y": 500
+          }
+        }
+      },
+      "Scavy": {
+        "boundaries": {
+          "upperLeft": {
+            "x": 0,
+            "y": 500
+          },
+          "bottomRight": {
+            "x": 600,
+            "y": 0
+          }
+        }
+      },
+      "Groola": {
+        "boundaries": {
+          "upperLeft": {
+            "x": 600,
+            "y": 500
+          },
+          "bottomRight": {
+            "x": 800,
+            "y": 0
+          }
+        }
+      },
+      "Nova": {
+        "boundaries": {
+          "upperLeft": {
+            "x": 800,
+            "y": 500
+          },
+          "bottomRight": {
+            "x": 1400,
+            "y": 0
+          }
+        }
+      }
+    }
+  ]
+}
