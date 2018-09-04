@@ -5,15 +5,23 @@ from flask_restful import Api
 
 from api.resources.spotippos import Spotippos
 
-app = Flask(__name__)
-api = Api(app, prefix='/api/v1')
 
-api.add_resource(
-    Spotippos,
-    '/properties/',
-    '/properties/<int:propertie_ground_id>',
-    endpoint='spotippos_properties'
-)
+def create_app():
+    app = Flask(__name__)
+    app.config.from_object('config')
+
+    api = Api(app, prefix='/api/v1')
+
+    api.add_resource(
+        Spotippos,
+        '/properties/',
+        '/properties/<int:propertie_ground_id>',
+        endpoint='spotippos_properties'
+    )
+
+    return app
+
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app = create_app()
+    app.run()
