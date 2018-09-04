@@ -1,0 +1,46 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept: [text/plain]
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      Content-type: [application/json]
+      User-Agent: [python-requests/2.19.1]
+    method: GET
+    uri: http://0.0.0.0:3000/properties/
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA92YS27bMBCG9zkF4XVgWC+76a7ooijQB9osgywYaWKzkESFooKkRU+VI+RiJSlZ
+        FieUIjuO6zaAgZC2SM73/xwOdXFCyC/1IWTCkslb4p3WDclkCqo9+Zg9PtxCSuLHh4QtufoBiXlG
+        InJTUSF5SYCE5IrmK2CCl5Pm8UKwWD/u+dFM/TW9CZSxYIVkPNdDf+ICMsKKsspIwlMuSMkkoRlI
+        PUdeQixBVoLQhBWsjFm+JJAyOV1PcqcGebNYD36vW/NF07qCpFQd0bpJ5Uq3w3Z9/JblMei+C9Ol
+        Os9jens/Ma3L5neljhI+gwShf+oFoer/fbqB1svJrzkFHU5eP6fwlTGFFqYAYwoQJm8I0weewCCl
+        dnTjKB8Rc475vfpBm/U6Z0BI3nMuEshpQkuSVxkoiuq/UmFaAU3UKtrgW33eFfCTcpJQsuKC53RI
+        nkF1EDLsEG/Ww1KDj2ZRR5SoFcWAChAoPPJGtCdmbjbbfBE8WWfUmd7bfNvr2/ng/p5OtnMG0u1c
+        GReoniDjCScZXeaqVaUFVdMxwq+vWcwoUYMzJa+cki+8lKJKCJQlOMzOjNuTiinxq1y2AwsoBKwg
+        V1ZQM97o7/MqTSlhohJg7QzP97si4P29fxGCMHpOg3A4yQ6L4Mhix6+CLUI0VoQ9mxqpNdLjbuVt
+        bx23AtjLRoQ5EgHBMaq10f4fTsQcXuqne4tRr4vdBjIiLLAIaIVbjrmPgLzB7fHPaW77GJncaPAG
+        aWB29mywRHJQGEj2flTTDzv0A1d6asQPkMZni04ORI44C+zIQrcoX+OYQkyVMncxFBIU3bUQmx5V
+        dk7JN6VRrZmuQMl1tWTqsZRecaHqU8hZZrsl9Losz9xJBR+iVkQ47D2Q3NG6B6DUJ59tuvqqNkMw
+        7ZFGsTwmEPvYIbadtoHpDdcc7bN/hURWpZKRRixGd0sX2h4LnOnCDpJ55zh3eKe/HGovbuYaZxmn
+        hovvgEcFt8WqTprbF7ANhth6/g5w9XpcOPFN0Vwto9H5chOw1mtcwIdQps8V/W8MLDbGwl6PBk7o
+        NU185Rs53SGI2CGNyugjz/+9mML2XU0T392O6YSp8/6BcZpYx/MMbJz4FuZOwoLzdNie25puhsuI
+        wEXJH0dpRCYyIUCNyXe/M7UwhWgT4yL92SS405Fqn5KHsOxOh+7IMsi5AewqoYaLq/YRDz5JvzuE
+        MVS+HVaF13FT/XrcVPEnl38AeS2fsIkZAAA=
+    headers:
+      Access-Control-Allow-Credentials: ['true']
+      Cache-Control: [no-cache]
+      Connection: [keep-alive]
+      Content-Encoding: [gzip]
+      Content-Type: [application/json; charset=utf-8]
+      Date: ['Tue, 04 Sep 2018 05:02:46 GMT']
+      ETag: [W/"1989-Gi1qjsSYlJ62ShjL2Hf9f2OJR8o"]
+      Expires: ['-1']
+      Pragma: [no-cache]
+      Vary: ['Origin, Accept-Encoding']
+      X-Content-Type-Options: [nosniff]
+      X-Powered-By: [Express]
+    status: {code: 200, message: OK}
+version: 1

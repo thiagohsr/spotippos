@@ -1,3 +1,5 @@
 marshmallow==3.0.0b13
 Flask-RESTful==0.3.6
 requests==2.19.1
+pytest==3.7.4
+vcrpy==1.13.0

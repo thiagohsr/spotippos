@@ -19,6 +19,7 @@ def schema_validation(data):
 
 
 def match_properties(properties_list, coordinates):
+    response_dict = namedtuple('response', 'content status_code')
     results = []
     for propertie in properties_list.json():
         min_long = int(coordinates.get('ax'))
@@ -29,12 +30,16 @@ def match_properties(properties_list, coordinates):
             results.append(propertie)
 
     if len(results):
-        return {
+        response_dict.content = {
             'totalProperties': len(results),
             'properties': results
-        }, properties_list.status_code
+        }
+        response_dict.status_code = properties_list.status_code
+        return response_dict
 
-    return {'content': 'Nenhum imóvel encontrado'}, 404
+    response_dict.content = 'Nenhum imóvel encontrado'
+    response_dict.status_code = 404
+    return response_dict
 
 
 def match_provinces(longitude, latitude):

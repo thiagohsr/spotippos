@@ -1,12 +1,8 @@
 # -*- coding: utf-8 -*-
 
 from api.constants import (
-    ERROR_MESSAGES,
-    DATABASE,
+    ERROR_MESSAGES
 )
-
-from flask import request
-from flask_restful import Resource
 
 from api.helpers.propertie import (
     schema_validation
@@ -17,6 +13,9 @@ from api.helpers.resolvers import (
     get_properties_by_coordinates,
     save_propertie
 )
+
+from flask import request
+from flask_restful import Resource
 
 
 class Spotippos(Resource):
@@ -32,7 +31,8 @@ class Spotippos(Resource):
             )
 
         if len(request.args):
-            return get_properties_by_coordinates(request.args)
+            response = get_properties_by_coordinates(request.args)
+            return response.content, response.status_code
 
         return ERROR_MESSAGES.get(404), 404
 
