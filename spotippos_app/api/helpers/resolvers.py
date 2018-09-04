@@ -4,34 +4,33 @@ import requests
 from collections import namedtuple
 
 from api.constants import (
-    DATA_API_HOST,
-    PROPERTIES_ENDPOINT,
     HEADER_JSON_CONTENT,
     ERROR_MESSAGES,
     SUCCESS_MESSAGES,
 )
-
 from api.helpers.propertie import match_provinces, match_properties
+
+from flask import current_app as app
 
 
 def get_propertie_by_id(propertie_ground_id):
     url = '{host}/{endpoint}/{propertie_ground_id}'.format(
-        host=DATA_API_HOST,
-        endpoint=PROPERTIES_ENDPOINT,
+        host=app.config.get('DATA_API_HOST'),
+        endpoint=app.config.get('PROPERTIES_ENDPOINT'),
         propertie_ground_id=propertie_ground_id
     )
 
-    response = requests.get(url, headers=HEADER_JSON_CONTENT)
+    response = requests.get(url)
     return response
 
 
 def get_properties_by_coordinates(coordinates):
     url = '{host}/{endpoint}/'.format(
-        host=DATA_API_HOST,
-        endpoint=PROPERTIES_ENDPOINT
+        host=app.config.get('DATA_API_HOST'),
+        endpoint=app.config.get('PROPERTIES_ENDPOINT')
     )
 
-    response = requests.get(url, headers=HEADER_JSON_CONTENT)
+    response = requests.get(url)
 
     properties = match_properties(
         response,
@@ -45,8 +44,8 @@ def save_propertie(propertie_data):
     response_dict = namedtuple('response', 'content status_code')
 
     url = '{host}/{endpoint}'.format(
-        host=DATA_API_HOST,
-        endpoint=PROPERTIES_ENDPOINT
+        host=app.config.get('DATA_API_HOST'),
+        endpoint=app.config.get('PROPERTIES_ENDPOINT')
     )
 
     provinces = match_provinces(
