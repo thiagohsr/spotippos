@@ -8,6 +8,11 @@ from api.constants import (
     ERROR_MESSAGES,
     SUCCESS_MESSAGES,
 )
+
+from api.helpers.propertie import (
+    schema_validation
+)
+
 from api.helpers.propertie import match_provinces, match_properties
 
 from flask import current_app as app
@@ -47,6 +52,10 @@ def save_propertie(propertie_data):
         host=app.config.get('DATA_API_HOST'),
         endpoint=app.config.get('PROPERTIES_ENDPOINT')
     )
+
+    valid_propertie = schema_validation(propertie_data)
+    if hasattr(valid_propertie, 'content'):
+        return valid_propertie
 
     provinces = match_provinces(
         longitude=propertie_data.get('x'), latitude=propertie_data.get('y')

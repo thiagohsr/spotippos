@@ -4,10 +4,6 @@ from api.constants import (
     ERROR_MESSAGES
 )
 
-from api.helpers.propertie import (
-    schema_validation
-)
-
 from api.helpers.resolvers import (
     get_propertie_by_id,
     get_properties_by_coordinates,
@@ -38,8 +34,6 @@ class Spotippos(Resource):
 
     def post(self):
         propertie_data = request.json
-        if schema_validation(propertie_data):
-            return schema_validation(propertie_data)
 
         response = save_propertie(propertie_data)
 
