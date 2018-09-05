@@ -10,29 +10,28 @@ def schema_validation(data):
 
     schema = PropertieSchema()
     try:
-        schema.load(data)
-
+        return schema.load(data)
     except ValidationError as errors:
         response_dict.content = errors.messages
         response_dict.status_code = 422
-        return response_dict.content, response_dict.status_code
+        return response_dict
 
 
 def match_properties(properties_list, coordinates):
     response_dict = namedtuple('response', 'content status_code')
-    results = []
+    min_long = int(coordinates.get('ax'))
+    min_lat = int(coordinates.get('ay'))
+    max_long = int(coordinates.get('bx'))
+    max_lat = int(coordinates.get('by'))
+    properties = []
     for propertie in properties_list.json():
-        min_long = int(coordinates.get('ax'))
-        min_lat = int(coordinates.get('ay'))
-        max_long = int(coordinates.get('bx'))
-        max_lat = int(coordinates.get('by'))
         if min_long <= propertie['x'] <= max_long and min_lat <= propertie['y'] <= max_lat:
-            results.append(propertie)
+            properties.append(propertie)
 
-    if len(results):
+    if len(properties):
         response_dict.content = {
-            'totalProperties': len(results),
-            'properties': results
+            'totalProperties': len(properties),
+            'properties': properties
         }
         response_dict.status_code = properties_list.status_code
         return response_dict
@@ -51,7 +50,7 @@ def match_provinces(longitude, latitude):
         min_long = province[1]['boundaries']['upperLeft']['x']
         min_lat = province[1]['boundaries']['bottomRight']['y']
 
-        if min_long <= longitude <= max_long and min_lat <= latitude <= max_lat:
+        if min_long <= int(longitude) <= max_long and min_lat <= int(latitude) <= max_lat:
             provinces.append(province[0])
 
     return provinces
