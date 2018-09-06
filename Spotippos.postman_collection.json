@@ -1,0 +1,53 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Spotippos",
+		"_postman_id": "ab380744-5e87-c133-8014-f6c35e44e748",
+		"description": "Calls to Spotippos API Code challenge from VivaReal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Property by ID",
+			"request": {
+				"url": "http://localhost:5000/api/v1/properties/1",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Return spotippos property by given ID"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Property by Coordinates",
+			"request": {
+				"url": "http://localhost:5000/api/v1/properties/1",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Return spotippos properties and total by given coordinates"
+			},
+			"response": []
+		},
+		{
+			"name": "Post Property",
+			"request": {
+				"url": "http://localhost:5000/api/v1/properties/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"Imóvel código 39, com 5 quartos e 4 banheiros.\",\n  \"price\": 1193000,\n  \"description\": \"Est ullamco officia sit in culpa sint mollit deserunt culpa. Consequat nostrud et deserunt sunt elit anim ullamco aliquip nulla velit ut ipsum id Lorem.\",\n  \"y\": 685,\n  \"x\": 164,\n  \"beds\": 5,\n  \"baths\": 4,\n  \"squareMeters\": 118\n}"
+				},
+				"description": "Insert and return spotippos property by given parameters"
+			},
+			"response": []
+		}
+	]
+}

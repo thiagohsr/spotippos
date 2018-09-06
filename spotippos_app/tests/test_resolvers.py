@@ -1,23 +1,13 @@
-import pytest
-import vcr
-
 from api.helpers.resolvers import (
     get_property_by_id,
     get_properties_by_coordinates,
     save_property,
 )
 
-my_vcr = vcr.VCR(
-    serializer='yaml',
-    cassette_library_dir='tests/fixtures/cassettes',
-    record_mode='once',
-    match_on=['uri', 'method'],
-)
-
 
 class TestResolvers(object):
 
-    def test_should_return_property_with_passed_id(self, app):
+    def test_should_return_property_with_passed_id(self, app, vcr_replay):
         expected_property = {
             'id': 1,
             'title': 'Imóvel código 1, com 5 quartos e 4 banheiros',
@@ -33,7 +23,7 @@ class TestResolvers(object):
             'squareMeters': 134,
         }
         property_id = expected_property.get('id')
-        with my_vcr.use_cassette(
+        with vcr_replay.use_cassette(
             'test_should_return_property_with_passed_id.yaml'
         ):
             with app.app_context():
@@ -45,14 +35,18 @@ class TestResolvers(object):
                         'title') == expected_property.get('title')
                 )
 
-    def test_should_return_properties_for_given_coordinates(self, app):
+    def test_should_return_properties_for_given_coordinates(
+        self,
+        app,
+        vcr_replay
+    ):
         request_coordinates = {
             'ax': 20,
             'ay': 500,
             'bx': 600,
             'by': 700,
         }
-        with my_vcr.use_cassette(
+        with vcr_replay.use_cassette(
             'test_should_return_properties_for_given_coordinates.yaml'
         ):
             with app.app_context():
@@ -61,7 +55,11 @@ class TestResolvers(object):
                     'totalProperties'
                 ) == len(response.content.get('properties'))
 
-    def test_should_not_return_properties_for_given_coordinates(self, app):
+    def test_should_not_return_properties_for_given_coordinates(
+        self,
+        app,
+        vcr_replay
+    ):
         request_coordinates = {
             'ax': 0,
             'ay': 0,
@@ -72,7 +70,7 @@ class TestResolvers(object):
             'content': 'Nenhum imóvel encontrado',
             'status_code': 404
         }
-        with my_vcr.use_cassette(
+        with vcr_replay.use_cassette(
             'test_should_not_return_properties_for_given_coordinates.yaml'
         ):
             with app.app_context():
@@ -83,7 +81,7 @@ class TestResolvers(object):
                     'status_code'
                 )
 
-    def test_should_save_property_data(self, app):
+    def test_should_save_property_data(self, app, vcr_replay):
         propertie_data = {
             'beds': 4,
             'price': 971000,
@@ -105,7 +103,7 @@ class TestResolvers(object):
             'status_code': 201
         }
 
-        with my_vcr.use_cassette(
+        with vcr_replay.use_cassette(
             'test_should_save_property_data.yaml'
         ):
             with app.app_context():
@@ -116,10 +114,11 @@ class TestResolvers(object):
     def test_should_fail_save_property_parameters_with_wrong_type(
         self,
         app,
-        invalid_property
+        invalid_property,
+        vcr_replay
     ):
         expected_status_code = 422
-        with my_vcr.use_cassette(
+        with vcr_replay.use_cassette(
             'test_should_fail_save_property_parameters_with_wrong_type.yaml'
         ):
             with app.app_context():

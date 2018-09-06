@@ -1,9 +1,9 @@
 interactions:
 - request:
-    body: '{"y": 141, "x": 101, "title": "Im\u00f3vel c\u00f3digo 4125, com 4 quartos
-      e 3 banheiros.", "description": "Occaecat excepteur officia excepteur sit. Qui
-      magna amet fugiat laborum enim.", "squareMeters": 93, "beds": 4, "baths": 3,
-      "provinces": ["Scavy"], "price": 971000}'
+    body: '{"y": 141, "title": "Im\u00f3vel c\u00f3digo 4125, com 4 quartos e 3 banheiros.",
+      "beds": 4, "price": 971000, "baths": 3, "squareMeters": 93, "provinces": ["Scavy"],
+      "description": "Occaecat excepteur officia excepteur sit. Qui magna amet fugiat
+      laborum enim.", "x": 101}'
     headers:
       Accept: [text/plain]
       Accept-Encoding: ['gzip, deflate']
@@ -14,11 +14,11 @@ interactions:
     method: POST
     uri: http://0.0.0.0:3000/properties
   response:
-    body: {string: "{\n  \"y\": 141,\n  \"x\": 101,\n  \"title\": \"Im\xF3vel c\xF3\
-        digo 4125, com 4 quartos e 3 banheiros.\",\n  \"description\": \"Occaecat\
-        \ excepteur officia excepteur sit. Qui magna amet fugiat laborum enim.\",\n\
-        \  \"squareMeters\": 93,\n  \"beds\": 4,\n  \"baths\": 3,\n  \"provinces\"\
-        : [\n    \"Scavy\"\n  ],\n  \"price\": 971000,\n  \"id\": 23\n}"}
+    body: {string: "{\n  \"y\": 141,\n  \"title\": \"Im\xF3vel c\xF3digo 4125, com\
+        \ 4 quartos e 3 banheiros.\",\n  \"beds\": 4,\n  \"price\": 971000,\n  \"\
+        baths\": 3,\n  \"squareMeters\": 93,\n  \"provinces\": [\n    \"Scavy\"\n\
+        \  ],\n  \"description\": \"Occaecat excepteur officia excepteur sit. Qui\
+        \ magna amet fugiat laborum enim.\",\n  \"x\": 101,\n  \"id\": 25\n}"}
     headers:
       Access-Control-Allow-Credentials: ['true']
       Access-Control-Expose-Headers: [Location]
@@ -26,10 +26,10 @@ interactions:
       Connection: [keep-alive]
       Content-Length: ['303']
       Content-Type: [application/json; charset=utf-8]
-      Date: ['Thu, 06 Sep 2018 01:11:35 GMT']
-      ETag: [W/"12f-kxQJprbGYjH2LlNZu490hlXNC4c"]
+      Date: ['Thu, 06 Sep 2018 04:24:04 GMT']
+      ETag: [W/"12f-IfMSCfkIb1Pay8GeKmD/ez98KoM"]
       Expires: ['-1']
-      Location: ['http://0.0.0.0:3000/properties/23']
+      Location: ['http://0.0.0.0:3000/properties/25']
       Pragma: [no-cache]
       Vary: ['Origin, X-HTTP-Method-Override, Accept-Encoding']
       X-Content-Type-Options: [nosniff]
