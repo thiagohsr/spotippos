@@ -1,5 +1,4 @@
-# -*- encoding:utf-8 -*-
-from api.schemas import PropertieSchema
+from api.schemas import PropertySchema
 from collections import namedtuple
 from marshmallow import ValidationError
 from api.constants import PROVINCES
@@ -8,7 +7,7 @@ from api.constants import PROVINCES
 def schema_validation(data):
     response_dict = namedtuple('response', 'content status_code')
 
-    schema = PropertieSchema()
+    schema = PropertySchema()
     try:
         return schema.load(data)
     except ValidationError as errors:
@@ -24,9 +23,9 @@ def match_properties(properties_list, coordinates):
     max_long = int(coordinates.get('bx'))
     max_lat = int(coordinates.get('by'))
     properties = []
-    for propertie in properties_list.json():
-        if min_long <= propertie['x'] <= max_long and min_lat <= propertie['y'] <= max_lat:
-            properties.append(propertie)
+    for spotippos_property in properties_list.json():
+        if min_long <= spotippos_property['x'] <= max_long and min_lat <= spotippos_property['y'] <= max_lat:
+            properties.append(spotippos_property)
 
     if len(properties):
         response_dict.content = {

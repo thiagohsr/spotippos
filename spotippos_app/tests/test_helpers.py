@@ -1,7 +1,7 @@
 import mock
 import pytest
 
-from api.helpers.propertie import (
+from api.helpers.property import (
     match_provinces,
     match_properties,
     schema_validation,
@@ -61,7 +61,7 @@ class TestHelpers(object):
         assert matched_properties.status_code == 404
 
     def test_should_return_propertie_for_given_valid_propertie_data(self):
-        propertie = {
+        spotippos_property = {
             'squareMeters': 93,
             'description': "Occaecat excepteur officia excepteur sit. Qui magna amet fugiat laborum enim.",
             'title': "Imóvel multi provincia, com 4 quartos e 3 banheiros.",
@@ -75,15 +75,15 @@ class TestHelpers(object):
                 "Ruja",
             ]
         }
-        valid_propertie_schema = schema_validation(propertie)
-        assert valid_propertie_schema == propertie
+        valid_spotippos_property_schema = schema_validation(spotippos_property)
+        assert valid_spotippos_property_schema == spotippos_property
 
-    def test_should_return_errors_for_given_invalid_propertie_data(
+    def test_should_return_errors_for_given_invalid_property_data(
         self,
         app,
-        invalid_propertie
+        invalid_property
     ):
         expected_errors = [['Not a valid integer.'], ['Not a valid string.']]
-        invalid_propertie_schema = schema_validation(invalid_propertie)
+        invalid_spotippos_property_schema = schema_validation(invalid_property)
         for error in expected_errors:
-            assert error in invalid_propertie_schema.content.values()
+            assert error in invalid_spotippos_property_schema.content.values()

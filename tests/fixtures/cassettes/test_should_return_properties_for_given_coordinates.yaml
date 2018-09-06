@@ -1,0 +1,44 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.19.1]
+    method: GET
+    uri: http://0.0.0.0:3000/properties/
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA92Y3U7bMBTH73kKq9eoar7asReYJu1DG5eIC5MciqckLo5TgaY9FY/Ai812Qhof
+        nOCW0pUhcWE3sX1+/7+Pj3NxQshv9U/IhGWTjyQ4bRqSyRxUe/K5eHxYQ07Sx4eMLbl6gKS8IAm5
+        ramQvCJAYnJFyxtggleT9vWVYKl+PQiTmfprezOoUsFWkvFSD/2FCygIW1V1QTKec0EqJgktQOo5
+        ygpSCbIWhGZsxaqUlUsCOZPTp0nu1CAfFk+D3+vWfNG2riCrVEfy1KTyRrfjbn18zcoUdN+F6VKd
+        5yld309M67J9rtJRwleQIPSjQRSr/j+nG2iDnMKGU9TjFAxzit8YU2xhijCmCGEKxjB94hmMUupG
+        N44KETHnmD/rX7Rdr3MGhOQbr6SoMwJVBQ4GzEDIalaRqi6lFqLgGScCVgJuoMxAKIK3+veyznNK
+        mKgFdMAGNY1GvT8dFRWRxsYKZgMSaL2SWdLTMum0NHwjxBePvNH62R5o9+h8ET1bZ9KbPtj8Oohm
+        7ovGy1BI7nOlFtBOxoIuS9Wq8xXVIhJ+fa0Up0QNzjIo5ZS8rT/uTGIL+yLgtLB/EaI4eUmDeDw3
+        j4vgSH7Hr4ItQuIrwp5NjdTy9Lhbedtbx60A9rIRYY5EQHCMal20/4cTMYfX+uneYjToYreBjAgL
+        LAJa4ZZj7iOgYHR7vDvNbR8jkxsNPiANzM6ejVZWDgojyT5MGvpxj37kSk+t+BHS+GzRy4HIEWeR
+        HVnsFuV7mlJIqVLmLoWVBEX3SYhNj6pWp+SH0qjRTBeu5LpeMvVaTq+4UGUtlKyw3RIHfZZn7qSC
+        D1ErIhz2HkjuaN0DUBqSzzZdc8ObIZj2SF4sjwnEPnaIbadtYAbjNUf37j8hUdS5ZKQVi9Hd0oW2
+        xwJnuriHZN47zh3eGS6Huvueuf1Zxmng4qvjUcHtsKqTZv0KttEY2yDcAa5ejwsnvimaq2XinS83
+        AWu9/AI+hDJDrhj+0GCxMRYOBjRwQm9o4iuf53SHIGKH5JXRPc//vZjC9l1DE9/djumEafL+gXGa
+        WP15RjZOfAtzJ2HBeT5uz21NN8NlROSiFPpR8shEJgRoMIXuT60WphhtYlykv5gEdzpS7VPyEJbd
+        6dD1LIOcG8CuEhq4z6p2BNcn176TCtKuoe1CcavzyZHimq/opmo/ufwLawQXPbAZAAA=
+    headers:
+      Access-Control-Allow-Credentials: ['true']
+      Cache-Control: [no-cache]
+      Connection: [keep-alive]
+      Content-Encoding: [gzip]
+      Content-Type: [application/json; charset=utf-8]
+      Date: ['Thu, 06 Sep 2018 00:48:27 GMT']
+      ETag: [W/"19b0-A2Vk/EGUS06jk1Zl1z+X78jjpgc"]
+      Expires: ['-1']
+      Pragma: [no-cache]
+      Vary: ['Origin, Accept-Encoding']
+      X-Content-Type-Options: [nosniff]
+      X-Powered-By: [Express]
+    status: {code: 200, message: OK}
+version: 1

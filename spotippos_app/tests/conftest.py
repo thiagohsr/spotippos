@@ -1,5 +1,3 @@
-# -*- encoding: utf-8 -*-
-
 import json
 import pytest
 
@@ -14,7 +12,7 @@ def app():
 
 
 @pytest.fixture
-def invalid_propertie():
+def invalid_property():
     return {
         'beds': 'quatro',
         'price': 'novecentos e sententa e um mil',
