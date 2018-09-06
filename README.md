@@ -29,7 +29,7 @@ API desenvolvida para corresponder as solicitações do [desafio back-end](https
 
   ````javascript
   curl -X POST http://localhost:5000/api/v1/properties/ -H 'content-type: application/json'
-   -d '{"title": "Imóvel código 39, com 5 quartos e 4 banheiros.", "price": 1193000, "description": "Est ullamco officia sit in culpa sint mollit deserunt culpa. Consequat nostrud et deserunt sunt elit anim ullamco aliquip nulla velit ut ipsum id Lorem.", "y": 685, "x": 164, "beds": 5, "baths": 4, "squareMeters": 118}'```
+   -d '{"title": "Imóvel código 39, com 5 quartos e 4 banheiros.", "price": 1193000, "description": "Est ullamco officia sit in culpa sint mollit deserunt culpa. Consequat nostrud et deserunt sunt elit anim ullamco aliquip nulla velit ut ipsum id Lorem.", "y": 685, "x": 164, "beds": 5, "baths": 4, "squareMeters": 118}'
   ````
 
   2. Mostre um imóvel específico em Spotippos =]
