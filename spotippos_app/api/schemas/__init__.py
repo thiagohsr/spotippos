@@ -1,5 +1,5 @@
-from .propertie import PropertieSchema
+from .property import PropertySchema
 
 __all__ = [
-    'PropertieSchema'
+    'PropertySchema'
 ]

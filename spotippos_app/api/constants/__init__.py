@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+
 HEADER_JSON_CONTENT = {
     'Content-type': 'application/json', 'Accept': 'text/plain'
 }

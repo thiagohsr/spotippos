@@ -20,7 +20,7 @@ from marshmallow import (
 )
 
 
-class PropertieSchema(Schema):
+class PropertySchema(Schema):
     baths = fields.Integer(required=True)
     beds = fields.Integer(required=True)
     description = fields.String(required=True)

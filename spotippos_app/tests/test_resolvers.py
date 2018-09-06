@@ -2,9 +2,9 @@ import pytest
 import vcr
 
 from api.helpers.resolvers import (
-    get_propertie_by_id,
+    get_property_by_id,
     get_properties_by_coordinates,
-    save_propertie,
+    save_property,
 )
 
 my_vcr = vcr.VCR(
@@ -17,8 +17,8 @@ my_vcr = vcr.VCR(
 
 class TestResolvers(object):
 
-    def test_should_return_propertie_with_passed_id(self, app):
-        expected_propertie = {
+    def test_should_return_property_with_passed_id(self, app):
+        expected_property = {
             'id': 1,
             'title': 'Imóvel código 1, com 5 quartos e 4 banheiros',
             'price': 1250000,
@@ -32,17 +32,17 @@ class TestResolvers(object):
             ],
             'squareMeters': 134,
         }
-        propertie_id = expected_propertie.get('id')
+        property_id = expected_property.get('id')
         with my_vcr.use_cassette(
-            'test_should_return_propertie_with_passed_id.yaml'
+            'test_should_return_property_with_passed_id.yaml'
         ):
             with app.app_context():
-                response = get_propertie_by_id(propertie_id)
-                propertie_json = response.json()
-                assert propertie_json.get('id') == expected_propertie.get('id')
+                response = get_property_by_id(property_id)
+                property_json = response.json()
+                assert property_json.get('id') == expected_property.get('id')
                 assert (
-                    propertie_json.get(
-                        'title') == expected_propertie.get('title')
+                    property_json.get(
+                        'title') == expected_property.get('title')
                 )
 
     def test_should_return_properties_for_given_coordinates(self, app):
@@ -83,7 +83,7 @@ class TestResolvers(object):
                     'status_code'
                 )
 
-    def test_should_save_propertie_data(self, app):
+    def test_should_save_property_data(self, app):
         propertie_data = {
             'beds': 4,
             'price': 971000,
@@ -106,24 +106,24 @@ class TestResolvers(object):
         }
 
         with my_vcr.use_cassette(
-            'test_should_save_propertie_data.yaml'
+            'test_should_save_property_data.yaml'
         ):
             with app.app_context():
-                response = save_propertie(propertie_data)
+                response = save_property(propertie_data)
                 assert response.content == expected_response['content']
                 assert response.status_code == expected_response['status_code']
 
-    def test_should_fail_save_propertie_parameters_with_wrong_type(
+    def test_should_fail_save_property_parameters_with_wrong_type(
         self,
         app,
-        invalid_propertie
+        invalid_property
     ):
         expected_status_code = 422
         with my_vcr.use_cassette(
-            'test_should_fail_save_propertie_parameters_with_wrong_type.yaml'
+            'test_should_fail_save_property_parameters_with_wrong_type.yaml'
         ):
             with app.app_context():
-                response = save_propertie(invalid_propertie)
-                for key in invalid_propertie:
+                response = save_property(invalid_property)
+                for key in invalid_property:
                     assert key in response.content
                 assert response.status_code == expected_status_code

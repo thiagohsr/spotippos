@@ -1,13 +1,13 @@
-# -*- coding: utf-8 -*-
+
 
 from api.constants import (
     ERROR_MESSAGES
 )
 
 from api.helpers.resolvers import (
-    get_propertie_by_id,
+    get_property_by_id,
     get_properties_by_coordinates,
-    save_propertie
+    save_property
 )
 
 from flask import request
@@ -19,7 +19,7 @@ class Spotippos(Resource):
     def get(self, propertie_ground_id=None):
 
         if propertie_ground_id:
-            response = get_propertie_by_id(propertie_ground_id)
+            response = get_property_by_id(propertie_ground_id)
             return (
                 response.json() if response.ok else ERROR_MESSAGES.get(
                     response.status_code
@@ -35,6 +35,6 @@ class Spotippos(Resource):
     def post(self):
         propertie_data = request.json
 
-        response = save_propertie(propertie_data)
+        response = save_property(propertie_data)
 
         return response.content, response.status_code

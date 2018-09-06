@@ -1,4 +1,3 @@
-# -*- encoding: utf-8 -*-
 import json
 import requests
 from collections import namedtuple
@@ -9,16 +8,16 @@ from api.constants import (
     SUCCESS_MESSAGES,
 )
 
-from api.helpers.propertie import (
+from api.helpers.property import (
     schema_validation
 )
 
-from api.helpers.propertie import match_provinces, match_properties
+from api.helpers.property import match_provinces, match_properties
 
 from flask import current_app as app
 
 
-def get_propertie_by_id(propertie_ground_id):
+def get_property_by_id(propertie_ground_id):
     url = '{host}/{endpoint}/{propertie_ground_id}'.format(
         host=app.config.get('DATA_API_HOST'),
         endpoint=app.config.get('PROPERTIES_ENDPOINT'),
@@ -45,7 +44,7 @@ def get_properties_by_coordinates(coordinates):
     return properties
 
 
-def save_propertie(propertie_data):
+def save_property(property_data):
     response_dict = namedtuple('response', 'content status_code')
 
     url = '{host}/{endpoint}'.format(
@@ -53,19 +52,19 @@ def save_propertie(propertie_data):
         endpoint=app.config.get('PROPERTIES_ENDPOINT')
     )
 
-    valid_propertie = schema_validation(propertie_data)
-    if hasattr(valid_propertie, 'content'):
-        return valid_propertie
+    valid_property = schema_validation(property_data)
+    if hasattr(valid_property, 'content'):
+        return valid_property
 
     provinces = match_provinces(
-        longitude=propertie_data.get('x'), latitude=propertie_data.get('y')
+        longitude=property_data.get('x'), latitude=property_data.get('y')
     )
 
     if provinces:
-        propertie_data.update({'provinces': provinces})
+        property_data.update({'provinces': provinces})
 
     response = requests.post(
-        url, data=json.dumps(propertie_data), headers=HEADER_JSON_CONTENT
+        url, data=json.dumps(property_data), headers=HEADER_JSON_CONTENT
     )
 
     response_dict.content = (
