@@ -1,5 +1,6 @@
 import json
 import pytest
+import vcr
 
 from flask import Flask
 from app import create_app
@@ -9,6 +10,16 @@ from app import create_app
 def app():
     app = create_app()
     return app
+
+
+@pytest.fixture
+def vcr_replay():
+    return vcr.VCR(
+        serializer='yaml',
+        cassette_library_dir='spotippos_app/tests/fixtures/cassettes',
+        record_mode='once',
+        match_on=['uri', 'method'],
+    )
 
 
 @pytest.fixture
