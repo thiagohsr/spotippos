@@ -1,3 +1,4 @@
+[![CircleCI](https://circleci.com/gh/thiagohsr/spotippos/tree/master.svg?style=svg)](https://circleci.com/gh/thiagohsr/spotippos/tree/master)
 # Code Challenge Grupo Zap (back-end)
 
 API desenvolvida para corresponder as solicitações do [desafio back-end](https://github.com/grupozap/code-challenge/blob/master/backend.md#desafio).
